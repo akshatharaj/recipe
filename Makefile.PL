@@ -9,7 +9,7 @@ $eumm_version =~ s/_//;
 
 WriteMakefile(
     NAME                => 'recipe',
-    AUTHOR              => q{YOUR NAME <youremail@example.com>},
+    AUTHOR              => q{AKSHATHA RAJ <araj0@frostburg.edu>},
     VERSION_FROM        => 'lib/recipe.pm',
     ABSTRACT            => 'YOUR APPLICATION ABSTRACT',
     ($eumm_version >= 6.3001
