@@ -1,16 +1,48 @@
 
 body {
-margin: 0;
-margin-bottom: 25px;
-padding: 0;
-background-color: #ddd;
-background-image: url("/images/perldancer-bg.jpg");
-background-repeat: no-repeat;
-background-position: top left;
+  margin: 0 auto;
+  width: 932px;
+  border:1px solid;
+  background-color: #FDFDFB;
+  margin-bottom: 25px;
+  padding: 0;
+  background-color: #ddd;
+  background-repeat: no-repeat;
+  background-position: top left;
+  font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
+  font-size: 13px;
+  color: #333;
+}
 
-font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-font-size: 13px;
-color: #333;
+#navbar{
+    height: 40px;
+    background-color: #73181D;
+}
+
+#navbar ul {
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    width: 100%;
+    display: block;
+    float: left;
+}
+
+#navbar ul li {
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 0 10px;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: #F5E9DB;
+    font-size: 16px;
+    font-family: Webdings;
+}
+
+#navbar ul li a:hover {
+    font-weight: bold;
 }
 
 h1 {
@@ -20,7 +52,6 @@ color: #000;
 
 a  {color: #03c}
 a:hover {
-background-color: #03c;
 color: white;
 text-decoration: none;
 }
@@ -28,18 +59,13 @@ text-decoration: none;
 #page {
 background-color: #ddd;
 width: 750px;
-margin: auto;
-margin-left: auto;
-padding-left: 0px;
-margin-right: auto;
 }
 
 #content {
 background-color: white;
-border: 3px solid #aaa;
 border-top: none;
 padding: 25px;
-width: 500px;
+width: 882px;
 }
 
 #sidebar {
@@ -180,10 +206,15 @@ code, tt {
 }
 
 #footer {
-clear: both;
-padding-top: 2em;
-text-align: center;
-padding-right: 160px;
-font-family: sans-serif;
-font-size: 10px;
+  background-color: #73181D;
+  padding: 2px 0px 2px 0px;
+}
+
+#footer p {
+  text-align: center;
+  font-family: Webdings;
+  font-size: 14px;
+  font-weight: bold;
+  font-style:italic;
+  color: #F5E9DB;
 }

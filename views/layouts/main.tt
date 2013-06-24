@@ -14,9 +14,21 @@
 
 </head>
 <body>
+<div id="banner">
+    <img src="<% request.uri_base %>/images/banner.png" />
+</div>
+<nav id="navbar">
+ <ul>
+  <li> <a href="#"> Home </a> </li>
+  <li> <a href="#"> View Recipes </a> </li> 
+  <li> <a href="#"> Post your receipe </a> </li> 
+  <li> <a href="#"> Contact us </a> </li>
+ </ul>
+</nav>
+
 <% content %>
 <div id="footer">
-Powered by <a href="http://perldancer.org/">Dancer</a> <% dancer_version %>
+ <p> Developed as part of coursework for COSC 630 by Akshatha Raj (araj0@frostburg.edu) </p>
 </div>
 </body>
 </html>
