@@ -36,20 +36,22 @@ get '/contact-us-thanks' => sub {
 };
 
 get '/post-recipe' => sub {
-    template 'post-recipe';
+    template 'post-recipe', {ingredients_tip => 'Please enter one ingredient per line'};
 };
 
 post '/post-recipe' => sub {
-    if (! params->{name} eq '' && ! params->{ingredients} eq '' && ! params->{procedure} eq '') {
+    if (! params->{dish} eq '' && ! params->{ingredients} eq '' && ! params->{procedure} eq '') {
         my $file = config->{recipe}{recipes};
         my $json = -e $file ? read_file $file : '{}';
         my $data = decode_json $json;
         my $now = time;
+        my @ingredients = split('\r\n', params->{ingredients});
         $data->{$now} = {
-            name => params->{name},
+            name => params->{dish},
             type => params->{type},
+            cuisine => params->{cuisine},
             preparation_time => params->{prep_time},
-            ingredients => params->{ingredients},
+            ingredients => \@ingredients,
             procedure => params->{procedure},
         };
         write_file $file, encode_json $data;
@@ -57,7 +59,10 @@ post '/post-recipe' => sub {
         redirect '/recipe-listing'; 
     }   
     else {
-        template 'post-recipe', {'errors' => 'Please note, Name, Ingredients and Procedure are required fields'};
+        template 'post-recipe', {errors => 'Please note, Name, Ingredients and Procedure are required fields',
+                                 dish => params->{dish}, prep_time => params->{prep_time}, cuisine => params->{cuisine},
+                                 ingredients => params->{ingredients}, procedure => params->{procedure},
+                                 ingredients_tip => 'Please enter one ingredient per line'};
     }
 };
 
@@ -67,4 +72,5 @@ get '/recipe-listing' => sub {
     my $data = decode_json $json;
     template 'recipe-listing', {'recipes' => $data};
 };
+
 true;

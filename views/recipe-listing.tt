@@ -1,4 +1,23 @@
 
-<div id="content" class="contact_us">
-  <p> Listing </p>
+<div id="content" class="recipe_listing">
+  <h1> Listing </h1>
+
+  <div>
+    <% FOR recipe IN recipes.keys.sort %>
+      <h2> <% recipes.$recipe.name %> </h2>
+      <p> <% recipes.$recipe.cuisine %> <% recipes.$recipe.type %> 
+          dish that could be made in <% recipes.$recipe.prep_time %>  
+      </p>
+      <h4> Ingredients: </h4>
+        <ul> 
+          <% FOR ingredient IN recipes.$recipe.ingredients %> 
+            <li> <% ingredient %> </li>
+          <% END %>
+        </ul> 
+      <h4> Procedure: </h4> 
+        <p> <% recipes.$recipe.procedure %> </p>
+      <hr/>
+    <% END %>
+  </div>
+
 </div>

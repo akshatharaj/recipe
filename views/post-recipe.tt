@@ -7,21 +7,22 @@
   <% END %>
 
   <form action="/post-recipe" method="POST">
-    <p> <label> *Name: </label> <input type="text" name="user"> </input> </p>
+    <p> <label> *Name: </label> <input type="text" name="dish" value="<% dish %>"> </input> </p>
     <p> <label> Type: </label>
-      <select name="select">
+      <select name="type">
         <option value="Starter">Starter</option> 
         <option value="Main Course" selected>Main Course</option>
         <option value="Dessert">Dessert</option>
       </select>
     </p> 
-    <p> <label> Cuisine: </label> <input type="text" name="cuisine"> </input> </p>
-    <p> <label> Preparation time: </label> <input type="text" name="prep_time"> </input> </p>
+    <p> <label> Cuisine: </label> <input type="text" name="cuisine" value="<% cuisine %>"> </input> </p>
+    <p> <label> Preparation time: </label> <input type="text" name="prep_time" value="<% prep_time %>"> </input> </p>
+    <p id="ingredients_tip"> <% ingredients_tip %> </p> 
     <p> <label> *Ingredients: </label> 
-        <textarea rows=10 cols=40 name="ingredients">
+        <textarea rows=10 cols=40 name="ingredients"><%ingredients%>
         </textarea> 
     </p>
-    <p> <label> *Procedure: </label> <textarea rows=10 cols=40 name="procedure"> </textarea> </p>
+    <p> <label> *Procedure: </label> <textarea rows=10 cols=40 name="procedure"><% procedure %></textarea> </p>
     <p> <input type="submit" value="Submit Recipe"> </submit> </p>
   </form>
 </div>
