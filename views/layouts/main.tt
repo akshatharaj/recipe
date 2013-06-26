@@ -19,10 +19,10 @@
 </div>
 <nav id="navbar">
  <ul>
-  <li> <a href="#"> Home </a> </li>
+  <li> <a href="/"> Home </a> </li>
   <li> <a href="#"> View Recipes </a> </li> 
   <li> <a href="#"> Post your receipe </a> </li> 
-  <li> <a href="#"> Contact us </a> </li>
+  <li> <a href="/contact-us"> Contact us </a> </li>
  </ul>
 </nav>
 
