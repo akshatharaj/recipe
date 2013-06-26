@@ -29,3 +29,4 @@ engines:
 
 recipe:
   contact_messages: ./contact-us.json
+  recipes: ./recipes.json

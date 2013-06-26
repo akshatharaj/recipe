@@ -1,0 +1,27 @@
+
+<div id="content" class="contact_us">
+  <p> Please enter information below </p>
+
+  <% IF errors %>
+    <p class="errors"> <% errors %> </p>
+  <% END %>
+
+  <form action="/post-recipe" method="POST">
+    <p> <label> *Name: </label> <input type="text" name="user"> </input> </p>
+    <p> <label> Type: </label>
+      <select name="select">
+        <option value="Starter">Starter</option> 
+        <option value="Main Course" selected>Main Course</option>
+        <option value="Dessert">Dessert</option>
+      </select>
+    </p> 
+    <p> <label> Cuisine: </label> <input type="text" name="cuisine"> </input> </p>
+    <p> <label> Preparation time: </label> <input type="text" name="prep_time"> </input> </p>
+    <p> <label> *Ingredients: </label> 
+        <textarea rows=10 cols=40 name="ingredients">
+        </textarea> 
+    </p>
+    <p> <label> *Procedure: </label> <textarea rows=10 cols=40 name="procedure"> </textarea> </p>
+    <p> <input type="submit" value="Submit Recipe"> </submit> </p>
+  </form>
+</div>
