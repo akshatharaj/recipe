@@ -57,6 +57,7 @@ background-color: #FCF7F3;
 border-top: none;
 padding: 25px;
 width: 882px;
+font-family: Chalkboard;
 }
 
 
@@ -212,4 +213,9 @@ label{
 
 .recipe_listing p{
   font-family: Chalkboard;
+}
+
+#content p{
+  font-size: 14px;
+  padding: 10px 0px 10px 25px;
 }
