@@ -3,8 +3,9 @@
   <% IF msg %>
     <p class="flash_mesg"> <% msg %> </p>
   <% END %>
+  <% USE page = Pagination(recipes.keys, current_page, entries_per_page) %>
   <div>
-    <% FOR recipe IN recipes.keys.sort %>
+    <% FOR recipe IN page.page_data %>
       <h2> <% recipes.$recipe.name %> </h2>
       <p> <% recipes.$recipe.cuisine %> <% recipes.$recipe.type %> 
           dish that could be made in <% recipes.$recipe.preparation_time %>  
@@ -16,8 +17,26 @@
           <% END %>
         </ul> 
       <h4> Procedure: </h4> 
-        <p id="recipe_procedure"> <% recipes.$recipe.procedure %> </p>
+        <p id="recipe_procedure"> <% recipes.$recipe.procedure %> 
+        </p>
       <hr/>
     <% END %>
+  </div>
+  <div id="page_links">
+    <a href="/recipe-listing?page=<% page.first_page %>">First</a>
+
+    <% IF page.previous_page %>
+      <a href="/recipe-listing?page=<% page.previous_page %>">Previous</a>
+    <% ELSE %>
+      <span>Previous</span>
+    <% END %>
+
+    <% IF page.previous_page %>
+      <a href="/recipe-listing?page=<% page.next_page %>">Next</a>
+    <% ELSE %>
+      <span>Next</span>
+    <% END %>
+
+    <a href="/recipe-listing?page=<% page.last_page %>">Last</a>
   </div>
 </div>

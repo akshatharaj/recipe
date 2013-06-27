@@ -24,6 +24,7 @@ template: "template_toolkit"
 engines:
   template_toolkit:
     encoding: 'utf8'
+    PLUGIN_BASE: 'Template::Plugin::Pagination'
 #     start_tag: '[%'
 #     end_tag:   '%]'
 

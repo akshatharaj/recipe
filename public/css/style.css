@@ -226,3 +226,13 @@ label{
   width: 750px;
   text-align: justified;
 }
+
+#page_links{
+  background-color: #FCF7F3;
+  float: right;
+  padding: 0px 0px 0px 0px;
+}
+
+#page_links a:link{
+  font-weight: 30px;
+}
