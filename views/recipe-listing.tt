@@ -7,7 +7,7 @@
     <% FOR recipe IN recipes.keys.sort %>
       <h2> <% recipes.$recipe.name %> </h2>
       <p> <% recipes.$recipe.cuisine %> <% recipes.$recipe.type %> 
-          dish that could be made in <% recipes.$recipe.prep_time %>  
+          dish that could be made in <% recipes.$recipe.preparation_time %>  
       </p>
       <h4> Ingredients: </h4>
         <ul> 
