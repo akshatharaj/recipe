@@ -17,18 +17,26 @@ get '/contact-us' => sub {
 };
 
 post '/contact-us' => sub {
-    my $file = config->{recipe}{contact_messages};
-    my $json = -e $file ? read_file $file : '{}';
-    my $data = decode_json $json;
-    my $now = time;
-    $data->{$now} = {
-        name => params->{user},
-        email => params->{email},
-        message => params->{message},
-    };
-    write_file $file, encode_json $data;
+    if (! params->{email} eq '' && ! params->{message} eq '') {
+        my $file = config->{recipe}{contact_messages};
+        my $json = -e $file ? read_file $file : '{}';
+        my $data = decode_json $json;
+        my $now = time;
+        $data->{$now} = {
+            name => params->{user},
+            email => params->{email},
+            message => params->{message},
+        };
+        write_file $file, encode_json $data;
 
-    redirect '/contact-us-thanks';
+        redirect '/contact-us-thanks';
+    }
+    else {
+        template 'contact_us', {errors => "Please note! email and message fields are required",
+                                tip_text => "Please use this form to contact us if you 
+                                             have any problems using the site or if you 
+                                             wanted to report any content on the site"};
+    }
 };
 
 get '/contact-us-thanks' => sub {
