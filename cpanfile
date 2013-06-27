@@ -1,2 +1,2 @@
-requires 'Dancer::Template::TemplateToolkit';
+requires 'Template';
 requires 'YAML::Old';
