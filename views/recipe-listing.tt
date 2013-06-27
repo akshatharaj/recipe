@@ -16,7 +16,7 @@
           <% END %>
         </ul> 
       <h4> Procedure: </h4> 
-        <p> <% recipes.$recipe.procedure %> </p>
+        <p id="recipe_procedure"> <% recipes.$recipe.procedure %> </p>
       <hr/>
     <% END %>
   </div>
