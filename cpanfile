@@ -1,0 +1,1 @@
+requires 'Dancer::Template::TemplateToolkit'

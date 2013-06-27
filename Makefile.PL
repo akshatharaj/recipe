@@ -11,7 +11,7 @@ WriteMakefile(
     NAME                => 'recipe',
     AUTHOR              => q{AKSHATHA RAJ <araj0@frostburg.edu>},
     VERSION_FROM        => 'lib/recipe.pm',
-    ABSTRACT            => 'YOUR APPLICATION ABSTRACT',
+    ABSTRACT            => 'Share your recipe',
     ($eumm_version >= 6.3001
       ? ('LICENSE'=> 'perl')
       : ()),
