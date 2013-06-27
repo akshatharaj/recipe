@@ -142,12 +142,12 @@ label{
 
 #ingredients_tip{
   border-radius: 25px;
-  width: 250px;
-  margin-left: 175px;
+  width: 275px;
+  margin-left: 190px;
   margin-top: 25px;
-  padding: 2px 22px 2px 22px;
   background-color: #EEBCA5;
   font-family: Chalkboard;
+  font-size: 10px;
 }
 
 .recipe_listing{
@@ -156,18 +156,20 @@ label{
 }
 
 .recipe_listing p{
-  padding: 5px 100px 5px 30px;
+  padding: 5px 100px 5px 32px;
 }
 
 .recipe_listing div{
   padding: 25px 0px 25px 0px;
   background-color: #EEBCA5;
   border-radius: 25px;
+  margin-bottom: 25px;
 }
 
 .recipe_listing hr{
   border-color: #915844;
   margin-top: 20px;
+  margin-bottom: 15px;
   width: 750px;
   margin-left: 25px;
 }
@@ -189,14 +191,14 @@ label{
 
 .recipe_listing h2{
   font-family: Chalkboard;
-  padding: 0px 0px 0px 30px;
+  padding: 0px 0px 0px 26px;
   font-size: 17px;
   line-height: 2px;
 }
 
 .recipe_listing h4{
   font-family: Chalkboard;
-  padding: 0px 0px 0px 30px;
+  padding: 0px 0px 0px 26px;
   font-size: 14px;
   line-height: 2px;
 }

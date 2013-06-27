@@ -1,7 +1,8 @@
-
 <div id="content" class="recipe_listing">
   <h1> Listing </h1>
-
+  <% IF msg %>
+    <p class="flash_mesg"> <% msg %> </p>
+  <% END %>
   <div>
     <% FOR recipe IN recipes.keys.sort %>
       <h2> <% recipes.$recipe.name %> </h2>
@@ -19,5 +20,4 @@
       <hr/>
     <% END %>
   </div>
-
 </div>

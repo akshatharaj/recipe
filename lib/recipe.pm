@@ -70,7 +70,7 @@ get '/recipe-listing' => sub {
     my $file = config->{recipe}{recipes};
     my $json = -e $file ? read_file $file : '{}';
     my $data = decode_json $json;
-    template 'recipe-listing', {'recipes' => $data};
+    template 'recipe-listing', {'recipes' => $data}
 };
 
 true;

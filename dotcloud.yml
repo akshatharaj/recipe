@@ -1,0 +1,16 @@
+www:
+    type: perl-worker
+    approot: app
+    ports:
+        www: http
+    systempackages:
+        - libdbd-mysql-perl
+    process: hypnotoad -f app.pl
+    postinstall: ./mysql.pl
+    requirements:
+        - JSON
+        - Mojolicious
+        - DBI
+        - DBD::mysql
+db:
+    type: mysql
